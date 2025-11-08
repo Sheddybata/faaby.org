@@ -153,6 +153,40 @@ export default function Process() {
       }
     }
   ];
+  
+  const warehouseMedia = [
+    {
+      type: 'video' as const,
+      src: 'https://www.youtube.com/embed/-eSvuk5L3LU',
+      title: 'Inside the Innovation Hub',
+      desc: 'Join a guided walkthrough of our warehouse—the heart of briquette production, quality assurance and order fulfilment for communities across Nigeria.',
+      poster: '/Our process/Phase 2/wasteburner.jpg'
+    },
+    {
+      type: 'image' as const,
+      src: '/Our process/Our werehouse/bagging.jpg',
+      title: 'Bagging for Distribution',
+      desc: 'Finished briquettes are weighed, sealed and prepared for local cooperatives and institutional partners.'
+    },
+    {
+      type: 'image' as const,
+      src: '/Our process/Our werehouse/bagging1.jpg',
+      title: 'Quality Control',
+      desc: 'Warehouse teams inspect every batch to ensure consistent size, moisture level and burning efficiency.'
+    },
+    {
+      type: 'image' as const,
+      src: '/Our process/Our werehouse/bagging2.jpg',
+      title: 'Women Leading Operations',
+      desc: 'Women-led warehouse crews coordinate orders, manage stock and train new production hubs across the BAY states.'
+    },
+    {
+      type: 'image' as const,
+      src: '/Our process/Our werehouse/bagging3.jpg',
+      title: 'Ready for Delivery',
+      desc: 'Stacked briquettes await dispatch to households, restaurants and humanitarian partners seeking clean energy.'
+    }
+  ];
 
   const handleImageSelect = (stepNumber: number, imageIndex: number) => {
     setSelectedImages(prev => ({ ...prev, [stepNumber]: imageIndex }));
@@ -519,6 +553,63 @@ export default function Process() {
               </div>
             ))}
           </div>
+
+        <div className="mt-20">
+          <div className="bg-white/80 backdrop-blur-sm border border-[#028a04]/10 rounded-3xl shadow-xl p-8 md:p-12">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+              <div className="lg:w-5/12 space-y-5">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#028a04]/70">
+                  <span className="block w-6 h-[2px] bg-[#028a04]/40"></span>
+                  Our Space
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#028a04] leading-tight">
+                  Our Werehouse
+                </h2>
+                <p className="text-gray-700 leading-relaxed">
+                  Go behind the scenes of the FAABY innovation hub where everyday operations transform agricultural
+                  waste into clean energy. Our warehouse is a learning centre, production floor and logistics hub,
+                  managed by women-led teams with precision and pride.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  From meticulous quality checks to calm packing lines, this is where ideas become products that warm
+                  thousands of homes across the BAY states.
+                </p>
+              </div>
+
+              <div className="lg:w-7/12 grid sm:grid-cols-2 gap-4 md:gap-6 w-full">
+                {warehouseMedia.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`group relative overflow-hidden rounded-2xl border border-[#028a04]/10 shadow-md bg-white ${item.type === 'video' ? 'sm:col-span-2' : ''}`}
+                  >
+                    {item.type === 'video' ? (
+                      <div className="relative w-full pt-[56.25%] bg-black rounded-t-2xl overflow-hidden sm:h-auto">
+                        <iframe
+                          src={`${item.src}?autoplay=0&modestbranding=1&rel=0`}
+                          title={item.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full border-0"
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        src={item.src}
+                        alt={item.title}
+                        className="w-full h-52 sm:h-60 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent px-4 py-5 text-white">
+                      <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                      <p className="text-sm text-white/85 leading-snug">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
           {/* Call to Action */}
           <div className="mt-24 md:mt-32 bg-gradient-to-br from-[#e6f7e9] via-[#028a04] to-[#028a04] rounded-2xl p-12 md:p-16 text-center text-white relative overflow-hidden">

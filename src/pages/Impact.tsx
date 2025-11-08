@@ -5,16 +5,28 @@ export default function Impact() {
 
   const stories = [
     {
-      name: 'Amina Mohammed',
-      location: 'Kano State',
-      story: 'After completing the training program, I started my own briquette production business. Now I employ 5 other women and we are making a real difference in our community.',
-      image: 'https://d64gsuwffb70l.cloudfront.net/690753a1911d06a8361fe1aa_1762088017722_16ee3234.webp'
+      name: 'Aisha & Zainab',
+      location: 'Borno State',
+      story: '“We used to depend on expensive firewood. After FAABY’s briquette training, we now produce and sell eco-briquettes from our homes. The extra income supports our children’s schooling and we have become mentors to other women in Maiduguri.”',
+      image: '/success story 1/Aishazainab.jpg'
     },
     {
-      name: 'Youth Cooperative Group',
-      location: 'Kaduna',
-      story: 'FAABY trained 30 young people in our community. We now run a successful clean energy distribution business that serves over 500 households.',
-      image: 'https://d64gsuwffb70l.cloudfront.net/690753a1911d06a8361fe1aa_1762088019468_8250d5fb.webp'
+      name: 'Takum Women Group',
+      location: 'Taraba State',
+      story: '“With FAABY’s support we formed a cooperative, learned briquette production and now supply clean cooking fuel across local markets. Our partnership has created a new revenue stream for dozens of families and reduced deforestation around Takum.”',
+      image: '/success story 2/Takumwomengroup.jpg'
+    },
+    {
+      name: 'Jere Women Community',
+      location: 'Borno State',
+      story: '“The FAABY innovation hub opened our eyes. We now understand how to turn agricultural waste into energy, run safe production lines and train other women. Knowledge has become our greatest asset.”',
+      image: '/success story 3/jerewomencommunity.jpg'
+    },
+    {
+      name: 'National Open University Nigeria',
+      location: 'Borno State',
+      story: '“Our students complete their practicum at the FAABY innovation hub where they work on real briquette production lines. The hands-on experience prepares them to lead climate-smart energy projects across Nigeria.”',
+      image: '/success story 4/Nationalopenuniversitynigeria.jpg'
     }
   ];
 
